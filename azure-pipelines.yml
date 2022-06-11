@@ -25,6 +25,8 @@ stages:
       dotnetSdkVersion: '6.x'
 
     steps:
+    - script: echo 'Hello'
+      condition: always()
     - task: UseDotNet@2
       displayName: 'Use .NET SDK $(dotnetSdkVersion)'
       inputs:
